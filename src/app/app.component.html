@@ -1,28 +1,4 @@
 <div class="container">
- <div class="card text-start mt-5 w-25">
-  <h5 class="card-header">Header card</h5>
-   <img class="card-img-top" src="holder.js/100px180/" alt="Title">
-   <div class="card-body ">
-     <h4 class="card-title ">Title</h4>
-     <p class="card-text">Body</p>
-     <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" [closeOthers]="true">
-      <ngb-panel title="Title1">
-        <ng-template ngbPanelContent>
-          Content1
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel title="Title2">
-        <ng-template ngbPanelContent>
-          Content2
-        </ng-template>
-      </ngb-panel>
-    </ngb-accordion>
-     <button type="button" class="btn btn-primary" >
-      Button
-     </button>
-   </div>
- </div>
-
-<router-outlet></router-outlet>
-
+	<app-navbar></app-navbar>
+	<router-outlet></router-outlet>
 </div>
