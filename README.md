@@ -1,27 +1,14 @@
 # ProjectsRoom
-
+This is the place for demo versions of my projects.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
-## Development server
+## Screen shotys and demo
+Here is link to interactive demo : https://krzysiekm266.github.io/projects-room <br>
+To open in new tab: ctrl+left click on a link. <br>
+Screenshots :
+![Screen](/screenshots/bookshelfscr1.png "Screen") <br>
+![Screen](/screenshots/bookshelfscr2.png "Screen") <br>
+<br>
+Mobile version: <br>
+![Screen](/screenshots/bookshelfmobile.png "Screen") <br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
