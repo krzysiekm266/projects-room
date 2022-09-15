@@ -1,31 +1,29 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-primary-light">
-    <div class="container">
-    <a class="navbar-brand" href="#">Projects-Room</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand">Projects-room</span>
+    <!-- Search -->
+
+    <!-- Projects -->
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+      aria-label="Toggle navigation" (click)="collapsed = !collapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li ngbDropdown class="nav-item d-inline-block">
-          <a class="nav-link" id="dropdownMenu1" ngbDropdownToggle>Projects</a>
-          <div ngbDropdownMenu aria-labelledby="dropdownMenu1" >
-            <button class="dropdown-item">flowershop</button>
-            <button class="dropdown-item">mybookshelf</button>
+    <div class="navbar-collapse " [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+            Projects
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu dropdown-menu-dark ">
+            <a ngbDropdownItem href="#scrollspyContent"  [routerLink]="['projects','flowershop']">Flower shop</a>
+            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','mybookshelf']">Bookshelf</a>
+            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','todoapp']">Todoapp-front</a>
+            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','myweb']">Myweb</a>
+            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','testapp']">Testapp</a>
+            <!-- <a ngbDropdownItem href="#" (click)="$event.preventDefault()" [routerLink]="['projects','projectsroom']">Projects-room</a> -->
           </div>
         </li>
-
       </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>

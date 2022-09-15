@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projects-room';
+  projectOpen:boolean = false;
+  col:string = '3';
+  colClose:string = '3';
+  colOpen:string = '12';
+
 }

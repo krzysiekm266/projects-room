@@ -1,4 +1,94 @@
 <div class="container">
-	<app-navbar></app-navbar>
-	<router-outlet></router-outlet>
+
+  <app-banner></app-banner>
+  <app-navbar></app-navbar>
+  <main class="container-fluid py-4 bg-light">
+    <hr>
+    <div class="row justify-content-center gap-2">
+      <div
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+      >
+        <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
+        <img
+          class="card-img-top"
+          [src]="'assets/img/projects/flowershop/flowershop1.png'"
+          alt="Title"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Flower shop</h4>
+          <p class="card-text text-dark">
+            Prosty sklep online sprzedający kwiatki:).
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+      >
+        <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
+        <img
+          class="card-img-top"
+          [src]="'assets/img/projects/mybookshelf/mybookshelf1.png'"
+          alt="Title"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Bookshelf</h4>
+          <p class="card-text text-dark">Półka na książki w wersji online.</p>
+        </div>
+      </div>
+
+      <div
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+      >
+        <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
+        <img
+          class="card-img-top"
+          [src]="'assets/img/projects/todoapp/todoapp1.png'"
+          alt="Title"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Todoapp</h4>
+          <p class="card-text text-dark">Lista zadań z kolorkami.</p>
+        </div>
+      </div>
+
+      <div
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+      >
+        <div class="card-header bg-dark text-capitalize p-2">
+          Frontend/Backend
+        </div>
+        <img
+          class="card-img-top"
+          [src]="'assets/img/projects/myweb/myweb1.png'"
+          alt="Title"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Myweb</h4>
+          <p class="card-text text-dark">
+            Prosta strona z panelem administratora.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+      >
+        <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
+        <img
+          class="card-img-top"
+          [src]="'assets/img/projects/testapp/testapp1.png'"
+          alt="Title"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Testapp</h4>
+          <p class="card-text text-dark">Prosta lista zdań do testów.</p>
+        </div>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <router-outlet></router-outlet>
+
+
+  </main>
 </div>

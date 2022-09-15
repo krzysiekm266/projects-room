@@ -1,0 +1,28 @@
+<div class=" project card text-white p-1  mb-2"  >
+   <div class="card-header  bg-dark  fs-4 p-4">
+      {{ name }} - {{ category }}
+   </div>
+   <img class="card-img-top " [src]="images[0]" alt="Title" />
+   <div class="card-body">
+     <h4 class="card-title text-dark text-capitalize">{{ name }}</h4>
+     <p class="card-text text-dark">
+      {{ shortDescription }}
+     </p>
+   </div>
+   <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-0"  >
+    <ngb-panel title="Description">
+      <ng-template ngbPanelContent>
+       {{ description }} <br>
+       <p>Technologie: {{ technologies }}</p>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Gallery" >
+      <ng-template ngbPanelContent> Content2 </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+  <div class="btn-group btn-group-lg mt-4" role="group" aria-label="Large button group">
+    <button type="button" class="btn btn-outline-dark">Demo version</button>
+    <button type="button" class="btn btn-outline-dark">Github repository</button>
+  </div>
+</div>
+
