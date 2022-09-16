@@ -1,5 +1,5 @@
 import { ConfigService } from './../../services/config.service';
-import { Component, EventEmitter, Input, OnInit, Output,DoCheck, } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output,DoCheck,AfterViewInit } from '@angular/core';
 import { map, tap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,10 +9,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./project.component.scss'],
   providers:[ConfigService]
 })
-export class ProjectComponent implements OnInit,DoCheck {
+export class ProjectComponent implements OnInit,DoCheck,AfterViewInit {
   @Input() category:string = '';
   @Input() name:string = '';
-  @Input() shortDescription ='';
+  @Input() shortDescription = '';
   @Input() description = '';
   @Input() technologies = '';
   @Input() images:string[] = [];
@@ -22,6 +22,9 @@ export class ProjectComponent implements OnInit,DoCheck {
   constructor(private _configService:ConfigService,private _activatedRoute:ActivatedRoute) {
 
    }
+  ngAfterViewInit(): void {
+
+  }
 
   ngDoCheck(): void {
     this.name !== this._nameChange ? this.ngOnInit() : '';
@@ -35,10 +38,11 @@ export class ProjectComponent implements OnInit,DoCheck {
       this.shortDescription = config.shortDescription;
       this.description = config.description;
       this.technologies = config.technologies;
-      this.images = config.images;
+      this.demoLink = config.links[0];
+      this.githubLink = config.links[1];
+      this.images = config.images.map( imgFile =>  `assets/img/projects/${this.name}/${imgFile}.png` );
 
     });
-    this.images = this.images.map( imgFile =>  `assets/img/projects/${this.name}/${imgFile}.png` );
   }
 
 

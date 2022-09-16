@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark py-4">
   <div class="container-fluid">
     <span class="navbar-brand">Projects-room</span>
     <!-- Search -->
@@ -15,11 +15,11 @@
             Projects
           </a>
           <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu dropdown-menu-dark ">
-            <a ngbDropdownItem href="#scrollspyContent"  [routerLink]="['projects','flowershop']">Flower shop</a>
-            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','mybookshelf']">Bookshelf</a>
-            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','todoapp']">Todoapp-front</a>
-            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','myweb']">Myweb</a>
-            <a ngbDropdownItem href="#scrollspyContent" (click)="$event.preventDefault()" [routerLink]="['projects','testapp']">Testapp</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" (click)="scrollToProject()" [routerLink]="['projects','flowershop']">Flower shop</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" (click)="scrollToProject()" [routerLink]="['projects','mybookshelf']">Bookshelf</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" (click)="scrollToProject()" [routerLink]="['projects','todoapp']">Todoapp-front</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" (click)="scrollToProject()" [routerLink]="['projects','myweb']">Myweb</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" (click)="scrollToProject()" [routerLink]="['projects','testapp']">Testapp</a>
             <!-- <a ngbDropdownItem href="#" (click)="$event.preventDefault()" [routerLink]="['projects','projectsroom']">Projects-room</a> -->
           </div>
         </li>

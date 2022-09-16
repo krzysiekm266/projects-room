@@ -1,3 +1,5 @@
+import { ConfigService } from './services/config.service';
+import { CarouselService } from './services/carousel.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +23,7 @@ import { ProjectComponent } from './components/project/project.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CarouselService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

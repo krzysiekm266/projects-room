@@ -7,9 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'projects-room';
-  projectOpen:boolean = false;
-  col:string = '3';
-  colClose:string = '3';
-  colOpen:string = '12';
+  scrollToProject() {
+    document.getElementById('project')?.scrollIntoView(true);
+  }
 
 }

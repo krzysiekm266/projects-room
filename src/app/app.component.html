@@ -1,12 +1,13 @@
 <div class="container">
-
   <app-banner></app-banner>
   <app-navbar></app-navbar>
   <main class="container-fluid py-4 bg-light">
-    <hr>
-    <div class="row justify-content-center gap-2">
+    <hr />
+    <div class="row justify-content-center gap-2" >
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects','flowershop']"
+        (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
         <img
@@ -24,6 +25,8 @@
 
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects','mybookshelf']"
+        (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
         <img
@@ -39,6 +42,8 @@
 
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects','todoapp']"
+        (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
         <img
@@ -54,6 +59,8 @@
 
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects','myweb']"
+        (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">
           Frontend/Backend
@@ -73,6 +80,8 @@
 
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects','testapp']"
+        (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
         <img
@@ -86,9 +95,7 @@
         </div>
       </div>
     </div>
-    <hr class="mb-4">
-    <router-outlet></router-outlet>
-
-
+    <hr class="mb-4" />
+    <router-outlet id="project" ></router-outlet>
   </main>
 </div>

@@ -8,10 +8,10 @@ import { filter, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConfigService {
-  config:Observable<Config[]> = of(CONFIG);
+  config$:Observable<Config[]> = of(CONFIG);
   constructor(private _http:HttpClient) { }
   getConfig(projectName:string):Observable<Config> {
-    return this.config.pipe(
+    return this.config$.pipe(
      map(config => {return config.find( cfg => cfg.name === projectName ) as Config}),
     //  tap(config => console.log(config)),
     ) as Observable<Config>;

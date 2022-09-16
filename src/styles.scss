@@ -8,3 +8,6 @@ $projects-colors:(
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 $theme-colors: map.merge($theme-colors,$projects-colors) ;
+:root {
+  scroll-behavior: smooth;
+}
