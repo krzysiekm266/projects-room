@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
   scrollToProject() {
     document.getElementById('project')?.scrollIntoView(true);

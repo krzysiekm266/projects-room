@@ -11,3 +11,11 @@ $theme-colors: map.merge($theme-colors,$projects-colors) ;
 :root {
   scroll-behavior: smooth;
 }
+body {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('assets/img/bg/bg5.jpg');
+
+}
