@@ -67,5 +67,5 @@ export const CONFIG:Config[] = [
       'https://krzysiekm266.github.io/testapp/',
       'https://github.com/krzysiekm266/testapp'
     ],
-    },
+  },
 ];

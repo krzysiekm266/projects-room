@@ -1,37 +1,44 @@
-<div class=" project card text-white p-1  mb-2"  id="project">
-   <div class="card-header  bg-dark  fs-4 p-4">
-      {{ name }} - {{ category }}
-   </div>
-   <!-- <img class="card-img-top " [src]="images[0]" alt="Title" /> -->
-   <div class="card-body">
-     <h4 class="card-title text-dark text-capitalize">{{ name }}</h4>
-     <p class="card-text text-dark">
-      {{ shortDescription }}
-     </p>
-   </div>
-   <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-0"  >
-    <ngb-panel title="Description">
-      <ng-template ngbPanelContent>
-       {{ description }} <br>
-       <p>Technologie: {{ technologies }}</p>
+<div class="project card text-white p-1 mb-2" id="project">
+  <div class="card-header bg-dark fs-4 p-4">
+    <span class="text-capitalize">{{ name }}</span> - {{ category }}
+  </div>
+  <!-- <img class="card-img-top " [src]="images[0]" alt="Title" /> -->
+  <div class="card-body">
+    <h4 class="card-title text-dark text-capitalize">{{ name }}</h4>
+    <p class="card-text text-dark">
+      {{ description }}
+    </p>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title text-dark text-capitalize">Technologies</h4>
+    <p class="card-text text-dark">
+      {{ technologies }}
+    </p>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title text-dark text-capitalize">Gallery</h4>
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper image h-100">
+          <img
+            [src]="image"
+            alt="Random slide"
+            class="image-carousel col-12 h-100"
+          />
+        </div>
       </ng-template>
-    </ngb-panel>
-    <ngb-panel title="Gallery" >
-      <ng-template ngbPanelContent>
-        <ngb-carousel *ngIf="images" >
-          <ng-template ngbSlide *ngFor="let image of images">
-            <div class="picsum-img-wrapper image h-100">
-              <img [src]="image" alt="Random slide"  class=" image-carousel col-12 h-100" >
-            </div>
-          </ng-template>
-        </ngb-carousel>
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion>
-  <div class="btn-group btn-group-lg mt-4" role="group" aria-label="Large button group">
-
-    <a  class="btn btn-outline-dark" [href]="demoLink" target="_blank">{{ name }} - demo version</a>
-    <a  class="btn btn-outline-dark" [href]="githubLink" target="_blank">Github repository</a>
+    </ngb-carousel>
+  </div>
+  <div
+    class="btn-group btn-group-lg mt-4"
+    role="group"
+    aria-label="Large button group"
+  >
+    <a class="btn btn-dark" [href]="demoLink" target="_blank"
+      >{{ name }} - demo version</a
+    >
+    <a class="btn btn-dark" [href]="githubLink" target="_blank"
+      >Github repository</a
+    >
   </div>
 </div>
-

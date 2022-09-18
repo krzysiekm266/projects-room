@@ -3,12 +3,13 @@
     <app-banner></app-banner>
     <app-navbar></app-navbar>
   </header>
-  <main class="container-fluid py-4 bg-light ">
+  <main class="container-fluid py-4 bg-light">
     <hr />
-    <div class="row justify-content-center gap-2   " >
+    <div class="row justify-content-center gap-2">
+      <!-- Flowershop project thumbnail -->
       <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2 "
-        [routerLink]="['projects','flowershop']"
+        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'flowershop']"
         (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
@@ -24,10 +25,10 @@
           </p>
         </div>
       </div>
-
+      <!-- Mybookshelf project thumbnail-->
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects','mybookshelf']"
+        [routerLink]="['projects', 'mybookshelf']"
         (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
@@ -41,10 +42,10 @@
           <p class="card-text text-dark">Półka na książki w wersji online.</p>
         </div>
       </div>
-
+      <!-- Todoapp-front project thumbnail-->
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects','todoapp']"
+        [routerLink]="['projects', 'todoapp']"
         (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
@@ -58,10 +59,10 @@
           <p class="card-text text-dark">Lista zadań z kolorkami.</p>
         </div>
       </div>
-
+      <!-- Myweb project thumbnail-->
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects','myweb']"
+        [routerLink]="['projects', 'myweb']"
         (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">
@@ -79,10 +80,10 @@
           </p>
         </div>
       </div>
-
+      <!-- Testapp project thumbnail-->
       <div
         class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects','testapp']"
+        [routerLink]="['projects', 'testapp']"
         (click)="scrollToProject()"
       >
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
@@ -98,6 +99,6 @@
       </div>
     </div>
     <hr class="mb-4" />
-    <router-outlet id="project" ></router-outlet>
+    <router-outlet id="project"></router-outlet>
   </main>
 </div>
