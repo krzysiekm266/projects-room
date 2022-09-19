@@ -1,5 +1,6 @@
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from './../../services/config.service';
-import { Component, EventEmitter, Input, OnInit, Output,DoCheck,AfterViewInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output,DoCheck,AfterViewInit,AfterViewChecked } from '@angular/core';
 import { map, tap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,9 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
-  providers:[ConfigService]
+  providers:[ConfigService,NgbCarouselConfig]
 })
-export class ProjectComponent implements OnInit,DoCheck,AfterViewInit {
+export class ProjectComponent implements OnInit,DoCheck {
   @Input() category:string = '';
   @Input() name:string = '';
   @Input() shortDescription = '';
@@ -19,12 +20,10 @@ export class ProjectComponent implements OnInit,DoCheck,AfterViewInit {
   @Input() demoLink:string = '';
   @Input() githubLink:string = '';
   private _nameChange:string = '';
-  constructor(private _configService:ConfigService,private _activatedRoute:ActivatedRoute) {
+  constructor(private _configService:ConfigService,private _ngbCrConfig: NgbCarouselConfig,private _activatedRoute:ActivatedRoute) {
 
    }
-  ngAfterViewInit(): void {
 
-  }
 
   ngDoCheck(): void {
     this.name !== this._nameChange ? this.ngOnInit() : '';
@@ -40,9 +39,13 @@ export class ProjectComponent implements OnInit,DoCheck,AfterViewInit {
       this.technologies = config.technologies;
       this.demoLink = config.links[0];
       this.githubLink = config.links[1];
-      this.images = config.images.map( imgFile =>  `assets/img/projects/${this.name}/${imgFile}.png` );
+      this.images = config.images.map( imgFile => {
+        if(imgFile == '' ) return imgFile;
+        return  `assets/img/projects/${this.name}/${imgFile}.png`;
+      } );
 
     });
+    this._ngbCrConfig.interval = 0;
   }
 
 

@@ -7,6 +7,13 @@ export interface Config {
  images:string[];
  links:string[];
 }
+
+/********************
+ *
+ * Projects table for demo version
+ * links[0] - link for demo version ,use 'disabled' value if there is no demo
+ * links[1] - link for github repository,use 'disabled' value if there is no github link
+ */
 export const CONFIG:Config[] = [
   {
     category:'frontend',
@@ -40,7 +47,7 @@ export const CONFIG:Config[] = [
     technologies:'Laravel(Blade),php,css,tailwind,html',
     images:['myweb1','myweb2'],
     links: [
-      'https://krzysiekm266.github.io/myweb',
+      'disabled',
       'https://github.com/krzysiekm266/myweb'
     ],
   },
@@ -68,4 +75,16 @@ export const CONFIG:Config[] = [
       'https://github.com/krzysiekm266/testapp'
     ],
   },
+  {
+    category:'backend',
+    name:'todoapp-back',
+    shortDescription:'Backend dla todoapp-front.',
+    description:'Prosty backend dla listy zadań.',
+    technologies:'Laravel,php,mysql',
+    images:[''],
+    links: [
+     'disabled',
+     'https://github.com/krzysiekm266/todoapp-back'
+   ],
+ },
 ];

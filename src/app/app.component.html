@@ -1,9 +1,23 @@
-<div class="container">
-  <header>
+<div class="container ">
+  <header >
     <app-banner></app-banner>
     <app-navbar></app-navbar>
   </header>
   <main class="container-fluid py-4 bg-light">
+    <div class="card border-dark">
+      <div class="card-body ">
+        Na tej stronie znajdują się projekty:
+        <ul>
+          <li>mające wersję demo</li>
+          <li>powiązane z projektami frontend(np.dla todoapp-front todoapp-back)</li>
+        </ul>
+        <p class="card-text">
+          Tutaj znajdziesz wszystkie moje projekty:
+          <a href="https://github.com/krzysiekm266/" target="_blank">Projekty Github</a>
+        </p>
+      </div>
+
+    </div>
     <hr />
     <div class="row justify-content-center gap-2">
       <!-- Flowershop project thumbnail -->
@@ -99,6 +113,9 @@
       </div>
     </div>
     <hr class="mb-4" />
-    <router-outlet id="project"></router-outlet>
+    <div id="project">
+      <router-outlet ></router-outlet>
+    </div>
+
   </main>
 </div>

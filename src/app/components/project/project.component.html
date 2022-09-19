@@ -1,4 +1,4 @@
-<div class="project card text-white p-1 mb-2" id="project">
+<div class="project card text-white p-1 mb-2" >
   <div class="card-header bg-dark fs-4 p-4">
     <span class="text-capitalize">{{ name }}</span> - {{ category }}
   </div>
@@ -34,11 +34,23 @@
     role="group"
     aria-label="Large button group"
   >
-    <a class="btn btn-dark" [href]="demoLink" target="_blank"
-      >{{ name }} - demo version</a
+    <button
+      type="button"
+      class="btn btn-dark"
+      [formaction]="demoLink"
+      target="_blank"
+      [disabled]="demoLink == 'disabled'"
     >
-    <a class="btn btn-dark" [href]="githubLink" target="_blank"
-      >Github repository</a
+      {{ demoLink ==='disabled' ? '' : name + ' - ' }} demo version {{ demoLink === 'disabled' ? 'comming soon' : '' }}
+    </button>
+    <button
+      type="button"
+      class="btn btn-dark"
+      [formaction]="githubLink"
+      target="_blank"
+      [disabled]="githubLink == 'disabled'"
     >
+      Github repository
+    </button>
   </div>
 </div>
