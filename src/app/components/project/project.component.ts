@@ -2,7 +2,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from './../../services/config.service';
 import { Component, EventEmitter, Input, OnInit, Output,DoCheck,AfterViewInit,AfterViewChecked } from '@angular/core';
 import { map, tap } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -20,7 +20,11 @@ export class ProjectComponent implements OnInit,DoCheck {
   @Input() demoLink:string = '';
   @Input() githubLink:string = '';
   private _nameChange:string = '';
-  constructor(private _configService:ConfigService,private _ngbCrConfig: NgbCarouselConfig,private _activatedRoute:ActivatedRoute) {
+  constructor(
+    private _configService:ConfigService,
+    private _ngbCrConfig: NgbCarouselConfig,
+    private _router:Router,
+    private _activatedRoute:ActivatedRoute) {
 
    }
 

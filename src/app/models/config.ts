@@ -87,4 +87,16 @@ export const CONFIG:Config[] = [
      'https://github.com/krzysiekm266/todoapp-back'
    ],
  },
+ {
+  category:'frontend',
+  name:'testbootstrap',
+  shortDescription:'Testowa aplikcja bootstrap.',
+  description:'Przykładowa strona firmowa.',
+  technologies:'html,scss,bootstrap',
+  images:['testbootstrap1','testbootstrap2','testbootstrap3','testbootstrap4'],
+  links: [
+   'https://krzysiekm266.github.io/test-bootstrap',
+   'https://krzysiekm266.github.io/test-bootstrap/'
+  ],
+},
 ];

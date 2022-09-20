@@ -1,5 +1,5 @@
 <div class="container ">
-  <header >
+  <header>
     <app-banner></app-banner>
     <app-navbar></app-navbar>
   </header>
@@ -19,19 +19,12 @@
 
     </div>
     <hr />
-    <div class="row justify-content-center gap-2">
+    <div class="row justify-content-center gap-2 mt-4 mb-4">
       <!-- Flowershop project thumbnail -->
-      <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects', 'flowershop']"
-        (click)="scrollToProject()"
-      >
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'flowershop']" (click)="scrollToProject()">
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
-        <img
-          class="card-img-top"
-          [src]="'assets/img/projects/flowershop/flowershop1.png'"
-          alt="Title"
-        />
+        <img class="card-img-top" [src]="'assets/img/projects/flowershop/flowershop1.png'" alt="Title" />
         <div class="card-body">
           <h4 class="card-title text-dark text-capitalize">Flower shop</h4>
           <p class="card-text text-dark">
@@ -40,53 +33,32 @@
         </div>
       </div>
       <!-- Mybookshelf project thumbnail-->
-      <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects', 'mybookshelf']"
-        (click)="scrollToProject()"
-      >
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'mybookshelf']" (click)="scrollToProject()">
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
-        <img
-          class="card-img-top"
-          [src]="'assets/img/projects/mybookshelf/mybookshelf1.png'"
-          alt="Title"
-        />
+        <img class="card-img-top" [src]="'assets/img/projects/mybookshelf/mybookshelf1.png'" alt="Title" />
         <div class="card-body">
           <h4 class="card-title text-dark text-capitalize">Bookshelf</h4>
           <p class="card-text text-dark">Półka na książki w wersji online.</p>
         </div>
       </div>
       <!-- Todoapp-front project thumbnail-->
-      <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects', 'todoapp']"
-        (click)="scrollToProject()"
-      >
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'todoapp']" (click)="scrollToProject()">
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
-        <img
-          class="card-img-top"
-          [src]="'assets/img/projects/todoapp/todoapp1.png'"
-          alt="Title"
-        />
+        <img class="card-img-top" [src]="'assets/img/projects/todoapp/todoapp1.png'" alt="Title" />
         <div class="card-body">
           <h4 class="card-title text-dark text-capitalize">Todoapp</h4>
           <p class="card-text text-dark">Lista zadań z kolorkami.</p>
         </div>
       </div>
       <!-- Myweb project thumbnail-->
-      <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects', 'myweb']"
-        (click)="scrollToProject()"
-      >
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2" [routerLink]="['projects', 'myweb']"
+        (click)="scrollToProject()">
         <div class="card-header bg-dark text-capitalize p-2">
           Frontend/Backend
         </div>
-        <img
-          class="card-img-top"
-          [src]="'assets/img/projects/myweb/myweb1.png'"
-          alt="Title"
-        />
+        <img class="card-img-top" [src]="'assets/img/projects/myweb/myweb1.png'" alt="Title" />
         <div class="card-body">
           <h4 class="card-title text-dark text-capitalize">Myweb</h4>
           <p class="card-text text-dark">
@@ -94,27 +66,34 @@
           </p>
         </div>
       </div>
-      <!-- Testapp project thumbnail-->
-      <div
-        class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
-        [routerLink]="['projects', 'testapp']"
-        (click)="scrollToProject()"
-      >
+      <!-- Tes-bootstrap project thumbnail-->
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'testbootstrap']" (click)="scrollToProject()">
         <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
-        <img
-          class="card-img-top"
-          [src]="'assets/img/projects/testapp/testapp1.png'"
-          alt="Title"
-        />
+        <img class="card-img-top" [src]="'assets/img/projects/testbootstrap/testbootstrap1.png'" alt="Title" />
+        <div class="card-body">
+          <h4 class="card-title text-dark text-capitalize">Test-bootstrap</h4>
+          <p class="card-text text-dark">Strona testowa bootstrap.</p>
+        </div>
+      </div>
+      <!-- Testapp project thumbnail-->
+      <div class="project-card card text-white bg-light p-1 col-md-4 col-lg-3 mx-2"
+        [routerLink]="['projects', 'testapp']" (click)="scrollToProject()">
+        <div class="card-header bg-dark text-capitalize p-2">Frontend</div>
+        <img class="card-img-top" [src]="'assets/img/projects/testapp/testapp1.png'" alt="Title" />
         <div class="card-body">
           <h4 class="card-title text-dark text-capitalize">Testapp</h4>
           <p class="card-text text-dark">Prosta lista zdań do testów.</p>
         </div>
       </div>
+
     </div>
     <hr class="mb-4" />
+    <div class="container bg-dark text-light">
+      <h2 class="p-5 text-center fw-bold fs-1">Projects</h2>
+    </div>
     <div id="project">
-      <router-outlet ></router-outlet>
+      <router-outlet></router-outlet>
     </div>
 
   </main>

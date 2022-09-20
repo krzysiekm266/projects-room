@@ -1,4 +1,4 @@
-<div class="project card text-white p-1 mb-2" >
+<div class="project card text-white p-1 mb-2">
   <div class="card-header bg-dark fs-4 p-4">
     <span class="text-capitalize">{{ name }}</span> - {{ category }}
   </div>
@@ -20,37 +20,21 @@
     <ngb-carousel *ngIf="images">
       <ng-template ngbSlide *ngFor="let image of images">
         <div class="picsum-img-wrapper image h-100">
-          <img
-            [src]="image"
-            alt="Random slide"
-            class="image-carousel col-12 h-100"
-          />
+          <img [src]="image" alt="Random slide" class="image-carousel col-12 h-100" />
         </div>
       </ng-template>
     </ngb-carousel>
   </div>
-  <div
-    class="btn-group btn-group-lg mt-4"
-    role="group"
-    aria-label="Large button group"
-  >
-    <button
-      type="button"
-      class="btn btn-dark"
-      [formaction]="demoLink"
-      target="_blank"
-      [disabled]="demoLink == 'disabled'"
-    >
+  <!-- Button links -->
+  <div class="btn-group btn-group-lg mt-4" role="group" aria-label="Large button group">
+
+    <button type="submit" class="btn btn-dark" [formaction]="demoLink" [disabled]="demoLink === 'disabled'" form="links">
       {{ demoLink ==='disabled' ? '' : name + ' - ' }} demo version {{ demoLink === 'disabled' ? 'comming soon' : '' }}
     </button>
-    <button
-      type="button"
-      class="btn btn-dark"
-      [formaction]="githubLink"
-      target="_blank"
-      [disabled]="githubLink == 'disabled'"
-    >
+    <form target="_blank" id="links"></form>
+    <button type="submit" class="btn btn-dark" [formaction]="githubLink" [disabled]="githubLink === 'disabled'" form="links">
       Github repository
     </button>
+
   </div>
 </div>
