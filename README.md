@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Here is link to interactive demo : https://krzysiekm266.github.io/projects-room <br>
 To open in new tab: ctrl+left click on a link. <br>
 Screenshots :
-![Screen](/screenshots/bookshelfscr1.png "Screen") <br>
-![Screen](/screenshots/bookshelfscr2.png "Screen") <br>
+![Screen](/projectsroom/projectsroom3.png "Screen") <br>
+![Screen](/projectsroom/projectsroom2.png  "Screen") <br>
 <br>
 Mobile version: <br>
-![Screen](/screenshots/bookshelfmobile.png "Screen") <br>
+![Screen](/projectsroom/projectsroom5.png "Screen") <br>
 

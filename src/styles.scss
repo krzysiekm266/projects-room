@@ -1,13 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-@use "sass:map";
-$projects-colors:(
-  "gray":rgb(156, 149, 149)
-);
-
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-$theme-colors: map.merge($theme-colors,$projects-colors) ;
+
 :root {
   scroll-behavior: smooth;
 }
